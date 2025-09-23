@@ -50,7 +50,7 @@ class PixelArtBattleship:
         header_frame.pack(fill='x', pady=(0, 10))
         
         # Título principal com efeito neon
-        title_text = "🛸 BATTLESHI.PY ⚡"
+        title_text = "🚢 BATTLESHI.PY 🚢"
         title_label = tk.Label(header_frame, text=title_text,
                               font=('Courier New', 24, 'bold'),
                               fg=self.colors['accent'],
@@ -59,12 +59,7 @@ class PixelArtBattleship:
                               bd=3)
         title_label.pack(pady=5)
         
-        # Subtítulo
-        subtitle = tk.Label(header_frame, text="RETROFUTURIST PIXELART EDITION",
-                           font=('Courier New', 10, 'bold'),
-                           fg=self.colors['accent2'],
-                           bg=self.colors['bg'])
-        subtitle.pack()
+    
         
         # Painel de status
         self.status_frame = tk.Frame(main_frame, bg=self.colors['panel'],
