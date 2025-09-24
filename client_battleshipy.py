@@ -17,7 +17,7 @@ class PixelArtBattleship:
         self.opponent_board = [[' ' for _ in range(10)] for _ in range(10)]
         self.ships_placed = False
         
-        # Cores retrofuturistas
+        # Cores 
         self.colors = {
             'bg': '#0a0a12',
             'panel': '#1a1a2e',
@@ -41,15 +41,15 @@ class PixelArtBattleship:
         self.root.configure(bg=self.colors['bg'])
         self.root.geometry('900x700')
         
-        # Frame principal com estilo cyber
+        # Frame principal 
         main_frame = tk.Frame(self.root, bg=self.colors['bg'], relief='flat')
         main_frame.pack(fill='both', expand=True, padx=10, pady=10)
         
-        # Cabeçalho com efeito pixelart
+        # Cabeçalho 
         header_frame = tk.Frame(main_frame, bg=self.colors['bg'], relief='flat')
         header_frame.pack(fill='x', pady=(0, 10))
         
-        # Título principal com efeito neon
+        # Título principal 
         title_text = "🚢 BATTLESHI.PY 🚢"
         title_label = tk.Label(header_frame, text=title_text,
                               font=('Courier New', 24, 'bold'),
@@ -177,7 +177,7 @@ class PixelArtBattleship:
             text_label.pack(side='left', padx=(5, 0))
     
     def draw_pixel_rect(self, canvas, x, y, size, color, pixel_size=4):
-        """Desenha um retângulo com efeito pixelart"""
+        """Desenha um retângulo"""
         for i in range(size):
             for j in range(size):
                 if i == 0 or i == size-1 or j == 0 or j == size-1:
@@ -190,7 +190,7 @@ class PixelArtBattleship:
                     )
     
     def draw_boards(self):
-        """Desenha os tabuleiros com estilo pixelart"""
+        """Desenha os tabuleiros"""
         for canvas, is_player in [(self.player_canvas, True), (self.opponent_canvas, False)]:
             canvas.delete("all")
             
